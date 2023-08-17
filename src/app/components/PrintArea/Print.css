@@ -1,0 +1,13 @@
+.headerRightWrapper {
+  display: flex;
+  align-items: center;
+}
+.headerIconWrapper {
+  display: flex;
+  align-items: center;
+}
+.headerIcon {
+  cursor: pointer;
+  display: inline-block;
+  max-width: 3rem;
+}

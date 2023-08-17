@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "micross";
+  src: url("./fonts/micross.woff");
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url("./fonts/Calibri.ttf");
+}
+
+@font-face {
+  font-family: "Calibril";
+  src: url("./fonts/calibril.ttf");
+}
+
+@font-face {
+  font-family: "Calibrib";
+  src: url("./fonts/calibrib.ttf");
+}
+:root {
+  --ms: "micross";
+  --c: "Calibri";
+  --cl: "Calibril";
+  --cb: "Calibrib";
+  --white: #ffffff;
+  --bg: #f5f5f5;
+  --green: #5aa65a;
+  --red: #f41b1b;
+  --text: #838383;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  color: var(--text);
+  font-family: var(--c);
+  background-color: var(--bg);
+}
+/* @media only screen and (max-width: 1370px) {
+    html {
+      font-size: 15px;
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    html {
+      font-size: 14px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    html {
+      font-size: 13px;
+    }
+  } */
+.max-width {
+  max-width: 1440px;
+}

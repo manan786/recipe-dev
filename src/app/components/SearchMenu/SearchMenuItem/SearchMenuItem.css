@@ -1,0 +1,74 @@
+
+/* card */
+.searchCardWrapper {
+  border: 1px solid var(--green);
+  border-radius: 15px;
+  max-width: 13rem;
+  margin-left: auto;
+  padding: 0.7rem;
+  text-align: center;
+}
+.searchMenuCardContentWrapper {
+  text-align: left;
+}
+.SMCH {
+  font-family: var(--cb);
+  color: var(--red);
+  font-size: 0.94rem;
+  margin-top: 0.7rem;
+  max-width: 9rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.SMCP {
+  font-size: 0.75rem;
+  line-height: 0.8rem;
+  color: var(--text);
+  display: inline-block;
+  margin-bottom: 0;
+}
+.SMCR {
+  color: var(--green);
+  font-size: 0.75rem;
+  display: inline-block;
+}
+.SMCR:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+.SMCDWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.SMCD {
+  font-size: 0.615rem;
+  margin-bottom: 0;
+}
+.SMCD span {
+  color: var(--red);
+  font-family: var(--cb);
+}
+@media only screen and (max-width: 992px) {
+  .searchCardCol {
+    display: none;
+  }
+  .searchMenuWrapper {
+    width: 37rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .searchMenuWrapper {
+    width: 30rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .searchMenuWrapper {
+    width: 20rem;
+  }
+}
+/* card end */
+
+/* header search menu end */

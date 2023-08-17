@@ -1,0 +1,113 @@
+/* searched Card */
+.MSBWrapper {
+  background-color: var(--white);
+  border-radius: 0.96rem;
+  padding: 0.7rem 1rem;
+  box-shadow: 0px 16.29862403869629px 23.904647827148438px 0px
+    rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  max-width: 18.4rem;
+}
+.MSBContentWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.MSBHead {
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--green);
+  font-family: var(--cb);
+  margin-bottom: 0.7rem;
+}
+.MSBListWrapper {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.MSBListWrapper li {
+  margin-bottom: 1rem;
+}
+.MSBListWrapper li:hover {
+}
+.MSBListWrapper li a {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid transparent;
+  max-width: fit-content;
+}
+.MSBListWrapper li a img {
+  margin-right: 0.3rem;
+}
+.MSBListWrapper li a:hover img {
+  filter: invert(33%) sepia(85%) saturate(6951%) hue-rotate(353deg)
+    brightness(99%) contrast(93%);
+}
+.MSBListWrapper li a:hover {
+  color: var(--red);
+  border-bottom: 1px solid var(--red);
+}
+.woodenImgHorizontal {
+  display: none;
+}
+/* searched Card end */
+@media only screen and (max-width: 992px) {
+  .MSBWrapper {
+    max-width: 25.7rem;
+  }
+  .addImg {
+    display: none;
+  }
+  .MSBContentWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .woodenImg {
+    display: none;
+  }
+  .woodenImgHorizontal {
+    display: inline-block;
+  }
+  .MSBListWrapper {
+    text-align: center;
+  }
+  .MSBListWrapper li {
+    display: inline-block;
+    margin: 0.5rem 0.7rem;
+  }
+  .MSBListWrapper li a {
+    font-size: 0.874rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mCardWrapper {
+    max-width: 23rem;
+  }
+  .mCardHead {
+    font-size: 1.8rem;
+  }
+  .mCardPara {
+    font-size: 1.23rem;
+    line-height: 1.8rem;
+    color: var(--text);
+  }
+  .mCardRBtn {
+    font-size: 1.23rem;
+    line-height: 1.8rem;
+  }
+  .mCardDetail {
+    font-size: 0.875rem;
+  }
+  .mCardDetail span {
+    color: var(--red);
+    font-family: var(--cb);
+  }
+  .mCardDetail span img {
+    width: 1rem;
+  }
+}
