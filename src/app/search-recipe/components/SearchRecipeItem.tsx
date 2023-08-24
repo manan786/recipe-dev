@@ -1,37 +1,52 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import cardImg1 from "@/app/assets/detailImg.webp";
-import cook from "@/app/assets/cook.svg";
-const SearchRecipeItem = ({ active }: { active: boolean }) => {
+import cardImg1 from "@/assets/cardImg1.webp";
+import cook from "@/assets/cook.svg";
+const SearchRecipeItem = ({
+  active,
+  item,
+}: {
+  item: Recipe;
+  active: boolean;
+}) => {
   return (
     <div className="col-12 px-0">
       <div>
         <div className={`sCardWrapper ${active && "active"}`}>
-          <Image
-            src={cardImg1}
-            width={184}
-            className="img-fluid scardImg"
-            alt="Picture of the author"
-            sizes="100vw"
-          />
+          <Link href={`/recipe-detail/${item?.name}`}>
+            <Image
+              src={item?.imageLink ?? cardImg1}
+              width={180}
+              height={337}
+              className="img-fluid scardImg me-sm-3 me-0"
+              alt="Picture of the author"
+            />
+          </Link>
           <div className="px-1 text-start">
-            <h5 className="sCardHead">Baguette Recipe</h5>
+            <Link href={`/recipe-detail/${item?.name}`}>
+              <h5 className="sCardHead">{item?.name}</h5>
+            </Link>
             <span className="sCardPara">
-              Lorem ipsum dolor sit amet onsectetur. egethendrerit sit aliquit
-              aliq. Lorem ipsum dolor sit amet onsectetur. egethendrerit sit
-              aliquit aliq.
+              {item?.meta_description.substring(0, 99)}
+              {item?.meta_description.length > 99 && "...."}
             </span>
-            <Link href={"/recipe-detail/hello-world"} className="sCardRBtn" aria-label="recipe detail page">
+            {/* {item?.meta_description.length > 99 && */}
+            <Link
+              href={`/recipe-detail/${item?.name}`}
+              className="sCardRBtn ms-2"
+              aria-label="recipe detail page"
+            >
               Read More
             </Link>
+            {/* } */}
             <div className="sCardDetailWrapper">
               <h6 className="sCardDetail">
                 <span>
                   <i className="bi bi-stopwatch-fill"></i>
                   Perp:
                 </span>
-                0 Days 4 Hrs 5 Min
+                {`${item?.preparation_time?.days} days ${item?.preparation_time?.hours} hours ${item?.preparation_time?.minutes} minutes`}
               </h6>
               <h6 className="sCardDetail">
                 <span>
@@ -44,7 +59,7 @@ const SearchRecipeItem = ({ active }: { active: boolean }) => {
                   />
                   Cook:
                 </span>
-                2 Hours
+                {`${item?.cook_time?.days} days ${item?.cook_time?.hours} hours ${item?.cook_time?.minutes} minutes`}
               </h6>
             </div>
           </div>

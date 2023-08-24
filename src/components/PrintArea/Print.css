@@ -1,0 +1,22 @@
+.headerIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  cursor: pointer;
+  line-height: 0px;
+} 
+.headerIcon > i {
+  color:#54A461;
+}
+.headerIconWrapper {
+  display: flex;
+  align-items: center;
+}
+.headerRightWrapper {
+  display: flex;
+  align-items: center;
+}
